@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  slot_id: 1
+  booking_date: 2021-11-18
+  total_cost: 1
+
+two:
+  user_id: 1
+  slot_id: 1
+  booking_date: 2021-11-18
+  total_cost: 1

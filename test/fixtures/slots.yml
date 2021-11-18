@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_id: 1
+  screen_id: 1
+  slot_time: 2021-11-18 17:06:15
+  num_of_seats_booked: 1
+
+two:
+  movie_id: 1
+  screen_id: 1
+  slot_time: 2021-11-18 17:06:15
+  num_of_seats_booked: 1
