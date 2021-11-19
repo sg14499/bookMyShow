@@ -6,6 +6,9 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.date :booking_date
       t.integer :total_cost
 
+      t.references :user, null: false, foreign_key: tr
+      t.references :slots
+
       t.timestamps
     end
   end

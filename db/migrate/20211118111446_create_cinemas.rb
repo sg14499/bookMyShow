@@ -4,6 +4,8 @@ class CreateCinemas < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :location_id
 
+      t.references :locations, null: false, foreign_key: true
+
       t.timestamps
     end
   end

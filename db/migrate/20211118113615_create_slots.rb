@@ -6,6 +6,9 @@ class CreateSlots < ActiveRecord::Migration[6.1]
       t.time :slot_time
       t.integer :num_of_seats_booked
 
+      t.references :movies, null: false, foreign_key: true
+      t.references :screens
+
       t.timestamps
     end
   end
