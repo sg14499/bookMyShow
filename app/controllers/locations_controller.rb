@@ -11,10 +11,6 @@ class LocationsController < ApplicationController
     @locations = Location.new
   	end
 
-  	def new
-    @locations = Location.new
-  	end
-
   	def create
     	@locations = Location.new(article_params)
 

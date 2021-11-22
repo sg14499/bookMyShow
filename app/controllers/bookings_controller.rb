@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 	def create
 		@user = User.find(params[:user_id])
 		@booking = @user.bookings.create(booking_params)
-		redirect_to article_path(@user)
+		redirect_to user_path(@user)
 
 	end
 

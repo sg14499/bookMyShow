@@ -1,8 +1,8 @@
 class CinemasController < ApplicationController
 	def create
 		@locations = Location.find(params[:location_id])
-		@cinemas = @user.cinemas.create(cinema_params)
-		redirect_to article_path(@locations)
+		@cinemas = @locations.cinemas.create(cinema_params)
+		redirect_to location_path(@locations)
 
 	end
 
