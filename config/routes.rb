@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user/show'
   get 'user/new'
   devise_for :users
   resources :movies
