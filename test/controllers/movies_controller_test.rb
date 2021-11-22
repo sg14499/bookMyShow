@@ -1,7 +1,8 @@
 require "test_helper"
 
 class MoviesControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get _form" do
+    get movies__form_url
+    assert_response :success
+  end
 end

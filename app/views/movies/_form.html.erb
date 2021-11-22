@@ -1,0 +1,54 @@
+<%= form_with model: movie do |form| %>
+	<div>
+		<%= form.label :name %><br>
+		<%= form.text_field :name %>
+		<% movie.errors.full_messages_for(:name).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+
+	<div>
+		<%= form.label :description %><br>
+		<%= form.text_field :description %>
+		<% movie.errors.full_messages_for(:description).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+
+	<div>
+		<%= form.label :duration %><br>
+		<%= form.text_field :duration %>
+		<% movie.errors.full_messages_for(:description).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+
+	<div>
+		<%= form.label :category %><br>
+		<%= form.text_field :category %>
+		<% movie.errors.full_messages_for(:category).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+
+	<div>
+		<%= form.label :language %><br>
+		<%= form.text_field :language %>
+		<% movie.errors.full_messages_for(:language).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+
+	<div>
+		<%= form.label :release_date %><br>
+		<%= form.text_field :release_date %>
+		<% movie.errors.full_messages_for(:release_date).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+	</div>
+
+	<div>
+		<%= form.submit %>
+	</div>
+
+<% end %>

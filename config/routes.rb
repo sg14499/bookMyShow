@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'movies/_form'
+  get 'movies/edit'
+  get 'movies/show'
+  get 'movies/new'
+  get 'movies/index'
   get 'user/show'
   get 'user/new'
   devise_for :users

@@ -1,0 +1,21 @@
+<h1><%= @movie.name%></h1>
+
+<h2><%= @movie.description %></h2>
+
+<h2><%= @movie.duration %></h2>
+
+<h2><%= @movie.category %></h2>
+
+<h2><%= @movie.language %></h2>
+
+<h2><%= @movie.release_date %></h2>
+
+<ul>
+	<li><%= link_to "Edit", edit_movie_path(@movie) %></li>  
+  	<li><%= link_to "Destroy", movie_path(@movie),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+
+
