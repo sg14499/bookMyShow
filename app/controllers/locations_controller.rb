@@ -12,7 +12,7 @@ class LocationsController < ApplicationController
   	end
 
   	def create
-    	@locations = Location.new(article_params)
+    	@locations = Location.new(location_params)
 
     	if @locations.save
       		redirect_to @locations

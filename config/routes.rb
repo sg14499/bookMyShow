@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookings/show'
+  get 'bookings/index'
   get 'movies/_form'
   get 'movies/edit'
   get 'movies/show'

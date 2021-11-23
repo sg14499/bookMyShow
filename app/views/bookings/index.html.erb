@@ -1,0 +1,9 @@
+<h1>Bookings</h1>
+
+<ul>
+  <% @booking.each do |booking| %>
+    <li>
+      <%= link_to booking.user_id, booking %>
+    </li>
+  <% end %>
+</ul>

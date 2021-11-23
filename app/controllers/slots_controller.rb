@@ -2,7 +2,7 @@ class SlotsController < ApplicationController
 	def create
 		@screens = Screen.find(params[:screen_id])
 		@slots = @screens.slots.create(slot_params)
-		redirect_to location_path(@screens)
+		redirect_to screens_path(@screens)
 
 	end
 

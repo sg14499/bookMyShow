@@ -1,8 +1,8 @@
 class ScreensController < ApplicationController
 	def create
 		@cinemas = Cinema.find(params[:cinema_id])
-		@screens = @cinema.screens.create(screens_params)
-		redirect_to location_path(@cinemas)
+		@screens = @cinemas.screens.create(screens_params)
+		redirect_to cinemas_path(@cinemas)
 
 	end
 
