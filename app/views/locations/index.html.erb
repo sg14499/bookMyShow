@@ -1,0 +1,14 @@
+<h1>Enter your preferred</h1>
+
+<%= form_with model: @locations do |form| %>
+	<div>
+      <%= form.label :city %><br>
+      <%= form.text_field :city %>
+    </div>
+
+    <div>
+  		<%= form.submit %>
+	</div>
+<% end %>
+
+

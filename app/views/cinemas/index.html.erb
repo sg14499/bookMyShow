@@ -1,0 +1,12 @@
+<h1>Select Cinema</h1>
+
+<%= form_with model: @cinemas do |form| %>
+	<div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+  		<%= form.submit %>
+	</div>
+<% end %>

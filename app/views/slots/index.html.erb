@@ -1,0 +1,14 @@
+<h1>Choose slot time</h1>
+
+<%= form_with model: @slots do |form| %>
+	<div>
+      <%= form.label :slot_time %><br>
+      <%= form.text_field :slot_time %>
+    </div>
+
+    <div>
+  		<%= form.submit %>
+	</div>
+<% end %>
+
+

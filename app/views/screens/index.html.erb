@@ -1,0 +1,9 @@
+<h1>Screens</h1>
+
+<ul>
+  <% @screens.each do |screen| %>
+    <li>
+      <%= link_to screen.screen_id, screen %>
+    </li>
+  <% end %>
+</ul>

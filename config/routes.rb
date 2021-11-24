@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
-  get 'bookings/show'
-  get 'bookings/index'
-  get 'movies/_form'
-  get 'movies/edit'
-  get 'movies/show'
-  get 'movies/new'
-  get 'movies/index'
-  get 'user/show'
-  get 'user/new'
+
   devise_for :users
   resources :movies
   resources :users do 
@@ -22,5 +14,4 @@ Rails.application.routes.draw do
     end
   end
 root "user#index"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
