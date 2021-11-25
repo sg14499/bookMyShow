@@ -1,44 +1,70 @@
 # Book My Show Clone
 
-Building Online Movie ticket booking application using Ruby on Rails like BookMyShow
+## Building Online Movie ticket booking application using Ruby on Rails like BookMyShow
 
-#Data Models
+### Data Models:
 
-User
+User:
 	name
 	email
 
-movie
-	movie_name
+movie:
+	name
 	description
 	release_date
 	duration
 	category
 	language
 
-cinema
+cinema:
 	name
 	location_id
 
-location
+location:
 	city
 
-screen
+screen:
 	cinema_id
 	no_of_seats
 
-slot
+slot:
 	movie_id
 	screen_id
-	time
+	slot_time
 	num_seat_booked   
 
 
-bookings
+bookings:
 	user_id
 	slot_id
-	date
+	booking_date
 	total_cost
+
+
+
+Relationships:
+
+User -> has_many :bookings
+
+movie -> has_many :bookings
+
+screen ->has_many :movies :through slot
+
+location -> has_many :cinema
+cinema -> belong_to :location
+
+cinema -> has_many :screen
+
+
+screen -> has_many :slot
+screen ->belongs_to :cinema
+
+slot -> belongs_to :movie
+slot -> belongs_to :screen
+
+booking -> belongs_to :user
+booking -> belongs_to :slot
+
 
 
 
