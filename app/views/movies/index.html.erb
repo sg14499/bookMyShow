@@ -1,11 +1,11 @@
 <h1 style = "text-align:center; font-size: 80px">Restaurants</h1>
 
 <ul>
-	<% @movies.each do |movie| %>
-		<li>
-			<%= link_to movie.name, movie %>
-		</li>
-	<% end %>
+  <% @movies.each do |movies| %>
+	<li>
+		<%= link_to movies.name, movies %>
+	</li>
+  <% end %>
 </ul>
 
 <%= link_to "New Movie", new_movie_path %>
