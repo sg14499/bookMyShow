@@ -17,28 +17,28 @@ movie:
 	> language
 
 cinema:
-	> name
-	> location_id
+	 name,
+	 location_id
 
 location:
-	> city
+	 city
 
 screen:
-	> cinema_id
-	> no_of_seats
+	 cinema_id,
+	 no_of_seats
 
 slot:
-	> movie_id
-	> screen_id
-	> slot_time
-	> num_seat_booked   
+	 movie_id,
+	 screen_id,
+	 slot_time,
+	 num_seat_booked   
 
 
 bookings:
-	> user_id
-	> slot_id
-	> booking_date
-	> total_cost
+	 user_id,
+	 slot_id,
+	 booking_date,
+	 total_cost
 
 
 
