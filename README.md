@@ -5,16 +5,16 @@
 ### Data Models:
 
 User:
-	> name
-	> email
+	 name,
+	 email
 
 movie:
-	> name
-	> description
-	> release_date
-	> duration
-	> category
-	> language
+	 name,
+	 description,
+	 release_date,
+	 duration,
+	 category,
+	 language
 
 cinema:
 	 name,
