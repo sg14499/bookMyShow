@@ -5,50 +5,50 @@
 ### Data Models:
 
 User:
-	name
-	email
+	> name
+	> email
 
 movie:
-	name
-	description
-	release_date
-	duration
-	category
-	language
+	> name
+	> description
+	> release_date
+	> duration
+	> category
+	> language
 
 cinema:
-	name
-	location_id
+	> name
+	> location_id
 
 location:
-	city
+	> city
 
 screen:
-	cinema_id
-	no_of_seats
+	> cinema_id
+	> no_of_seats
 
 slot:
-	movie_id
-	screen_id
-	slot_time
-	num_seat_booked   
+	> movie_id
+	> screen_id
+	> slot_time
+	> num_seat_booked   
 
 
 bookings:
-	user_id
-	slot_id
-	booking_date
-	total_cost
+	> user_id
+	> slot_id
+	> booking_date
+	> total_cost
 
 
 
-Relationships:
+### Relationships:
 
 User -> has_many :bookings
 
 movie -> has_many :bookings
 
-screen ->has_many :movies :through slot
+screen ->has_many :movies, through: :slot
 
 location -> has_many :cinema
 cinema -> belong_to :location
