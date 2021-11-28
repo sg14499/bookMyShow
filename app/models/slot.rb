@@ -1,4 +1,4 @@
 class Slot < ApplicationRecord
-	belongs_to :movies
-	belongs_to :screens
+	belongs_to :movie
+	belongs_to :screen
 end

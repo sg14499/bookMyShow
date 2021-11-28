@@ -1,13 +1,23 @@
 class SlotsController < ApplicationController
+  def index
+    @screen = Screen.find(params[:screen_id])
+    @slots = @screen.slots
+  end
+
+  def show
+    @screen = Screen.find(params[:screen_id])
+    @slots = Slot.find(params[:id])
+  end
+
   def create
-    @screens = Screen.find(params[:screen_id])
-    @slots = @screens.slots.create(slot_params)
-    redirect_to screens_path(@screens)
+    @screen = Screen.find(params[:screen_id])
+    @slots = @screen.slots.create(slot_params)
+    redirect_to screen_path(@screen)
 
   end
 
   private
     def slot_params
-      params.require(:slots).permit(:movie_id,:screen_id,:slot_time,:num_seat_booked)
+      params.require(:slot).permit(:movie_id,:slot_time,:num_seat_booked)
     end
 end

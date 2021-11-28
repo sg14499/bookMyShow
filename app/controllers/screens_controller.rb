@@ -1,13 +1,22 @@
 class ScreensController < ApplicationController
+  def index
+    @cinema = Cinema.find(params[:cinema_id])
+    @screens= @cinema.screens 
+  end
+
+  def show
+    @screens = Screen.find(params[:id])
+  end
+
   def create
-    @cinemas = Cinema.find(params[:cinema_id])
-    @screens = @cinemas.screens.create(screens_params)
-    redirect_to cinemas_path(@cinemas)
+    @cinema = Cinema.find(params[:cinema_id])
+    @screen = @cinema.screens.create(screens_params)
+    redirect_to cinema_path(@cinema)
 
   end
 
   private
     def screens_params
-      params.require(:screens).permit(:cinema_id,:no_of_seats)
+      params.require(:screen).permit(:no_of_seats)
     end
 end

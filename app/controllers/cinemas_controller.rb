@@ -1,13 +1,23 @@
 class CinemasController < ApplicationController
+
+  def index
+    @location = Location.find(params[:location_id])
+    @cinemas = @location.cinemas
+  end
+
+  def show
+    @cinemas = Cinema.find(params[:id])
+  end
+
   def create
-    @locations = Location.find(params[:location_id])
-    @cinemas = @locations.cinemas.create(cinema_params)
-    redirect_to location_path(@locations)
+    @location = Location.find(params[:location_id])
+    @cinema = @location.cinemas.create(cinema_params)
+    redirect_to location_path(@location)
 
   end
 
   private
     def cinema_params
-      params.require(:cinemas).permit(:city,:location_id)
+      params.require(:cinema).permit(:name)
     end
 end

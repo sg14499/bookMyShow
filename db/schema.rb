@@ -13,19 +13,22 @@
 ActiveRecord::Schema.define(version: 2021_11_18_113916) do
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "slot_id"
     t.date "booking_date"
     t.integer "total_cost"
+    t.integer "user_id", null: false
+    t.integer "slot_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["slot_id"], name: "index_bookings_on_slot_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "cinemas", force: :cascade do |t|
     t.string "name"
-    t.integer "location_id"
+    t.integer "location_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["location_id"], name: "index_cinemas_on_location_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -46,19 +49,22 @@ ActiveRecord::Schema.define(version: 2021_11_18_113916) do
   end
 
   create_table "screens", force: :cascade do |t|
-    t.integer "cinema_id"
     t.integer "no_of_seats"
+    t.integer "cinema_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["cinema_id"], name: "index_screens_on_cinema_id"
   end
 
   create_table "slots", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "screen_id"
     t.time "slot_time"
     t.integer "num_of_seats_booked"
+    t.integer "movie_id", null: false
+    t.integer "screen_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_slots_on_movie_id"
+    t.index ["screen_id"], name: "index_slots_on_screen_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,4 +80,10 @@ ActiveRecord::Schema.define(version: 2021_11_18_113916) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "slots"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "cinemas", "locations"
+  add_foreign_key "screens", "cinemas"
+  add_foreign_key "slots", "movies"
+  add_foreign_key "slots", "screens"
 end

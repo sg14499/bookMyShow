@@ -1,9 +1,9 @@
 <h1>User</h1>
 
 <ul>
-  <% @user.each do |user| %>
+  <% @users.each do |users| %>
     <li>
-      <%= link_to user.name, user %>
+      <%= link_to users.name, users %>
     </li>
   <% end %>
 </ul>

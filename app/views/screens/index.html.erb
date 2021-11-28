@@ -3,7 +3,8 @@
 <ul>
   <% @screens.each do |screen| %>
     <li>
-      <%= link_to screen.screen_id, screen %>
+      <p>Screen ID: <%= screen.id %></p>
+      <p>Total Seat Capacity: <%= screen.no_of_seats %></p>
     </li>
   <% end %>
 </ul>

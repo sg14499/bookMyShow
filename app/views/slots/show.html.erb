@@ -1,4 +1,8 @@
-<h1><%= @slots.slot_time %></h1>
-<h2>Seat Available : <%= @screens.no_of_seats - @slots.num_seat_booked %></h2>
+<h1>Time Slots Available : <%= @slots.slot_time %></h1>
+
+<p>Seat Available : <%= @screen.no_of_seats - @slots.num_of_seats_booked %></p>
+
+<p>Total seats : <%= @screen.no_of_seats %></p>
+<p>Seat Booked : <%= @slots.num_of_seats_booked %></p>
 
 
