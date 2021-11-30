@@ -1,2 +1,4 @@
-<h1><%= @screens.no_of_seats %></h1>
+<h1>Total Seats: <%= @screens.no_of_seats %></h1>
+
+<%= link_to "Slots", location_cinema_screen_slots_url(@screens.id,@screens,@screens.id) %>
 

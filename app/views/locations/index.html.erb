@@ -4,9 +4,11 @@
   <% @locations.each do |location| %>
     <li>
       <p>Location ID : <%= location.id %></p>
-      <p>City : <%= location.city %></p>
+      <p>City : <%= link_to location.city, location %></p>
+
     </li>
   <% end %>
 </ul>
+
 
 

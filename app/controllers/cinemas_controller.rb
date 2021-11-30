@@ -5,6 +5,10 @@ class CinemasController < ApplicationController
     @cinemas = @location.cinemas
   end
 
+  def new
+    @cinemas = Cinema.new
+  end
+
   def show
     @cinemas = Cinema.find(params[:id])
   end

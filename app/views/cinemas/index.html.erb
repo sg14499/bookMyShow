@@ -3,6 +3,7 @@
 <ul>
   <% @cinemas.each do |cinema| %>
     <li>
+      <a href="cinemas/<%= cinema.id %>">
       <p>Cinema ID: <%= cinema.id %></p>
       <p>Cinema Name: <%= cinema.name %></p>
     </li>

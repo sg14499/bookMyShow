@@ -3,6 +3,7 @@
 <ul>
   <% @slots.each do |slot| %>
     <li>
+      <a href="slots/<%= slot.id %>">
       <p>slot id : <%= slot.id %></p>
       <p>slot time : <%= slot.slot_time %></p>
     </li>

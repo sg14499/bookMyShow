@@ -8,6 +8,10 @@ class ScreensController < ApplicationController
     @screens = Screen.find(params[:id])
   end
 
+  def new
+    @screens = Screen.new
+  end
+
   def create
     @cinema = Cinema.find(params[:cinema_id])
     @screen = @cinema.screens.create(screens_params)
