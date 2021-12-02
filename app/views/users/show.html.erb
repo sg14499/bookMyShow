@@ -2,9 +2,15 @@
 
 <p><%= @user.email %></p>
 
+
 <ul>
   <li><%= link_to "Edit", edit_user_path(@user) %></li>
   <li><%= link_to "Destroy", user_path(@user),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
+
+
+<%= link_to "Movies", movies_url(@movies) %>
+
+<%= link_to '|| Back', url_for(:back) %>

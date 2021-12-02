@@ -6,3 +6,8 @@
 <p>Seat Booked : <%= @slots.num_of_seats_booked %></p>
 
 
+
+<%= link_to 'Back ||', url_for(:back) %>
+<%= link_to "Bookings" , user_bookings_url(@user_id = current_user.id,@users) %>
+
+

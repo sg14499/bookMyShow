@@ -16,5 +16,6 @@ Rails.application.routes.draw do
       end
     end
   end
-root "users#index"
+root "users#home"
+#root "users#index"
 end

@@ -1,7 +1,17 @@
-<h1><%= @booking.user_id%></h1>
+<h1>Booking ID: <%= @bookings.id%></h1>
 
-<h2><%= @booking.slot_id %></h2>
+<h2>Slot ID: <%= @bookings.slot_id %></h2>
 
-<h2><%= @booking.booking_date %></h2>
+<p>Slot time: <%= @bookings.slot.slot_time %></p>
 
-<h2><%= @booking.total_cost %></h2>
+<p>Booking Date: <%= @bookings.booking_date %></p>
+
+<p>Ticket Price: <%= @bookings.total_cost = 200 %></p>
+
+<ul>
+	<li><%= link_to "Cancel booking", new_user_booking_path(@bookings),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<%= link_to 'Back', url_for(:back) %>

@@ -1,4 +1,13 @@
-<h1>User</h1>
+<h1>You are Logged In!!!</h1>
+
+<p>User Name : <%= current_user.name %></p>
+<p>User ID : <%= current_user.id %></p>
+<p>User Email : <%= current_user.email %></p>
+
+<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<%= link_to '|| Back', url_for(:back) %>
+
+<h1>All Users</h1>
 
 <ul>
   <% @users.each do |users| %>

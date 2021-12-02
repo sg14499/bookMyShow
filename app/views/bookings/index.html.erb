@@ -3,7 +3,13 @@
 <ul>
   <% @bookings.each do |bookings| %>
     <li>
-      <%= link_to bookings.user_id, bookings %>
+      <a href="bookings/<%=bookings.id  %>">
+      <%= bookings.user.name %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to 'Back ||', url_for(:back) %>
+
+<%= link_to "Create New Booking", new_user_booking_path %>
+
