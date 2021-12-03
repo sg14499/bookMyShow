@@ -1,6 +1,6 @@
 <h1>New Booking</h1>
 
-<%= form_with model: @booking do |form| %>
+<%= form_with model: [@user,@user.bookings.new] do |form| %>
 
   <div class="field">
     <%= form.label :Slot_Id %><br>
@@ -9,12 +9,19 @@
 
   <div class="field">
     <%= form.label :Booking_Date %><br>
-    <%= form.text_area :booking_date %>
+    <%= form.date_field :booking_date %>
+  </div>
+
+  <div class="field">
+    <p>Enter Price is 200 for Now:  </p>
+    <%= form.label :Price %><br>
+    <%= form.number_field :total_cost %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Book ticket" %>
+    <%= form.submit "Book Ticket" %>
   </div>
 <% end %>
 
-<%= link_to 'Back', url_for(:back) %>
+
+<%= link_to 'Back', user_bookings_url %>

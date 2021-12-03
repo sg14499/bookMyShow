@@ -1,4 +1,5 @@
 <h1>Slots</h1>
+<p>Select Slot According to the Movie ID</p>
 
 <ul>
   <% @slots.each do |slot| %>
@@ -6,6 +7,7 @@
       <a href="slots/<%= slot.id %>">
       <p>slot id : <%= slot.id %></p>
       <p>slot time : <%= slot.slot_time %></p>
+      <p>Movie ID: <%= slot.movie_id %></p>
     </li>
   <% end %>
 </ul>

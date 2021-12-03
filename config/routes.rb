@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   end
 root "users#home"
 #root "users#index"
+
+#post '/users/:user_id/bookings/new' => 'bookings#create'
+
+#get '/users/:user_id/bookings/new' => 'bookings#create'
 end

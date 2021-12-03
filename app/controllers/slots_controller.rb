@@ -2,6 +2,7 @@ class SlotsController < ApplicationController
   def index
     @screen = Screen.find(params[:screen_id])
     @slots = @screen.slots
+
   end
 
   def show

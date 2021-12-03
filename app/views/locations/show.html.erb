@@ -1,5 +1,7 @@
 <h2>Locations: <%= @locations.city %></h2>
 
+<p> Location ID : <%= @locations.id %></p>
+
 <%= link_to 'Back ||', url_for(:back) %>
 
 <%= link_to "Select Cinemas", location_cinemas_url(@locations) %>

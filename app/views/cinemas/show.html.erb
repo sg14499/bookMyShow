@@ -1,5 +1,7 @@
 <h1><%= @cinemas.name %></h1>
 
+<p>Cinema ID:<%= @cinemas.id %></p>
+
 
 <%= link_to 'Back ||', url_for(:back) %>
 <%= link_to "Select Screens", location_cinema_screens_url(@cinemas.id,@cinemas) %>
