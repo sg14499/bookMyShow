@@ -1,6 +1,6 @@
 <h1>New Booking</h1>
 
-<%= form_with model: [@user,@user.bookings.new] do |form| %>
+<%= form_with model: [@user,@user.bookings.new],id: "new_booking" do |form| %>
 
   <div class="field">
     <%= form.label :Slot_Id %><br>
@@ -25,3 +25,8 @@
 
 
 <%= link_to 'Back', user_bookings_url %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script type="text/javascript">
+  <%= render "validate.js" %>
+</script>

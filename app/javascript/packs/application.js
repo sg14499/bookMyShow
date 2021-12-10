@@ -11,6 +11,10 @@ import "channels"
 //= require jquery.validate.additional-methods 
 //= require jquery.validate
 
+//= require jquery.validate.localization/messages_XX
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+require('jquery')
+
