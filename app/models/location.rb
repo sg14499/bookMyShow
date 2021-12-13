@@ -1,3 +1,3 @@
 class Location < ApplicationRecord
-	has_many :cinemas
+	has_many :cinemas, dependent: :destroy
 end
