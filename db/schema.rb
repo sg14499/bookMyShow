@@ -12,11 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2021_11_18_113916) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "adminpack"
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.date "booking_date"
     t.integer "total_cost"
-    t.integer "user_id", null: false
-    t.integer "slot_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "slot_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["slot_id"], name: "index_bookings_on_slot_id"
@@ -25,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_11_18_113916) do
 
   create_table "cinemas", force: :cascade do |t|
     t.string "name"
-    t.integer "location_id", null: false
+    t.bigint "location_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["location_id"], name: "index_cinemas_on_location_id"
@@ -50,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_11_18_113916) do
 
   create_table "screens", force: :cascade do |t|
     t.integer "no_of_seats"
-    t.integer "cinema_id", null: false
+    t.bigint "cinema_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cinema_id"], name: "index_screens_on_cinema_id"
@@ -59,8 +63,8 @@ ActiveRecord::Schema.define(version: 2021_11_18_113916) do
   create_table "slots", force: :cascade do |t|
     t.time "slot_time"
     t.integer "num_of_seats_booked"
-    t.integer "movie_id", null: false
-    t.integer "screen_id", null: false
+    t.bigint "movie_id", null: false
+    t.bigint "screen_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["movie_id"], name: "index_slots_on_movie_id"

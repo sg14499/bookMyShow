@@ -1,24 +1,11 @@
 class UsersController < ApplicationController
-  validates :login, :email, presence: true
-
-  before_validation :ensure_login_has_a_value
-
-  after_save_commit :log_user_saved_to_db
   
   def index
     @users = User.all
   end
 
-  after_initialize do |user|
-    puts "You have initialized an object!"
-  end
-
   def show
     @user = User.find(params[:id])
-  end
-
-  after_find do |user|
-    puts "You have found an object!"
   end
 
   def new
@@ -71,15 +58,5 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password)
-    end
-
-    def log_user_saved_to_db
-      puts 'User was saved to database'
-    end
-
-    def ensure_login_has_a_value
-      if login.nil?
-        self.login = email unless email.blank?
-      end
     end
 end

@@ -8,6 +8,8 @@ gem 'httparty'
 
 gem 'jquery-validation-rails'
 
+gem 'pg'
+
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
@@ -38,10 +40,6 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-end
-
-group :production do
-  gem 'pg', '~> 1.2', '>= 1.2.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

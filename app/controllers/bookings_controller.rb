@@ -1,6 +1,4 @@
 class BookingsController < ApplicationController
-  after_destroy :log_destroy_action
-
   def index
     @user = User.find(params[:user_id])
     @bookings = @user.bookings
@@ -35,10 +33,6 @@ class BookingsController < ApplicationController
   private
     def booking_params
       params.require(:booking).permit(:slot_id,:booking_date,:total_cost)
-    end
-
-    def log_destroy_action
-      puts 'Booking destroyed'
     end
 
 end
