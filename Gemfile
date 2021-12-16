@@ -6,9 +6,13 @@ gem 'devise', '~> 4.8.0'
 
 gem 'httparty'
 
+gem 'rails_admin', '~> 2.0'
+
 gem 'jquery-validation-rails'
 
 gem 'pg'
+
+gem "letter_opener", :group => :development
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record

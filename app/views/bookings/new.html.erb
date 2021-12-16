@@ -13,9 +13,8 @@
   </div>
 
   <div class="field">
-    <p>Enter Price is 200 for Now:  </p>
-    <%= form.label :Price %><br>
-    <%= form.number_field :total_cost %>
+    <p>Price is 200</p>
+    <%= form.hidden_field :total_cost, value: 200 %>
   </div>
 
   <div class="actions">

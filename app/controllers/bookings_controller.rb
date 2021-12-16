@@ -17,8 +17,12 @@ class BookingsController < ApplicationController
     @user = User.find(params[:user_id])
     @booking = @user.bookings.create!(booking_params)
     if @booking.save
+        BookingMailer.with(booking: @booking).new_booking_email.deliver_later
+
+        flash[:success] = "Thank you for your Booking!!!"
         redirect_to user_path(@user)
     else
+        flash.now[:error] = "Your booking form had some errors. Please check the form and resubmit."
         render :new
     end
   end
