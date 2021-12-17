@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 root "users#home"
 #root "users#index"
 
+get '/search',to: "movies#search"
+
 #post '/users/:user_id/bookings/new' => 'bookings#create'
 
 #get '/users/:user_id/bookings/new' => 'bookings#create'

@@ -1,0 +1,33 @@
+<h3>Search Results</h3>
+
+	<% @results.each do |result| %>
+		<div class="row">
+			<div class="column">
+				<% if result.name == "Satyameva Jayate 2" %>
+					<%= image_tag("SM-2.jpg", size: "370x500", :alt => "rss feed") %>
+				<% end %>
+			</div>
+
+			<div class="column">
+				<% if result.name == "Sooryavanshi" %>
+					<%= image_tag("sooryavanshi.jpg", size: "370x500", :alt => "rss feed") %>
+				<% end %>
+			</div>
+
+			<div class="column">
+				<% if result.name == "Antim:the final truth" %>
+					<%= image_tag("Antim.jpg", size: "370x500", :alt => "rss feed") %>
+				<% end %>
+			</div>
+
+			<div class="column">
+				<% if result.name == "Bunty Aur Babli 2" %>
+					<%= image_tag("Bab.jpg", size: "370x500", :alt => "rss feed") %>
+				<% end %>
+			</div>
+			<p><%= link_to result.name, result %></p>
+		</div>
+		<!--<%= result.name %><br>-->
+	<% end %>
+
+

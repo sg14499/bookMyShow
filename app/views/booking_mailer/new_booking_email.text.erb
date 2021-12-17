@@ -4,14 +4,18 @@ Your booking is confirmed!
 Booking Details:
 --------------------------
 
-Booking ID: <%= @bookings.id%>
+Booking ID: <%= @booking.id %>
 
-Slot ID: <%= @bookings.slot_id %>
+Cinema: <%= @booking.slot.screen.cinema.name %> , <%= @booking.slot.screen.cinema.location.city %>
 
-Slot time: <%= @bookings.slot.slot_time %>
+Slot ID: <%= @booking.slot_id %>
 
-Movie ID : <%= @bookings.slot.movie_id %>
+Slot time: <%= @booking.slot.slot_time %>
 
-Booking Date: <%= @bookings.booking_date %>
+Movie ID : <%= @booking.slot.movie_id %>
 
-Ticket Price: <%= @bookings.total_cost %>
+Movie Name : <%= @booking.slot.movie.name %>
+
+Booking Date: <%= @booking.booking_date %>
+
+Ticket Price: <%= @booking.total_cost %>

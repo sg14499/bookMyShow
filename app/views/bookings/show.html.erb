@@ -1,14 +1,18 @@
 <h1>Booking ID: <%= @bookings.id%></h1>
 
+<p>Cinema: <%= @bookings.slot.screen.cinema.name %> , <%= @bookings.slot.screen.cinema.location.city %></p>
+
 <h2>Slot ID: <%= @bookings.slot_id %></h2>
 
 <p>Slot time: <%= @bookings.slot.slot_time %></p>
 
 <p>Movie ID : <%= @bookings.slot.movie_id %></p>
 
+<p>Movie Name : <%= @bookings.slot.movie.name %></p>
+
 <p>Booking Date: <%= @bookings.booking_date %></p>
 
-<p>Ticket Price: <%= @bookings.total_cost = 200 %></p>
+<p>Ticket Price: <%= @bookings.total_cost %></p>
 
 <ul>
 	<li><%= link_to "Cancel booking", new_user_booking_path(@bookings),

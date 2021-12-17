@@ -9,17 +9,21 @@
     Booking details<br>
     --------------------------
     </p>
-    <p>Booking ID: <%= @bookings.id%></p>
+    <p>Booking ID: <%= @booking.id %></p>
 
-    <p>Slot ID: <%= @bookings.slot_id %></p>
+    <p>Cinema: <%= @booking.slot.screen.cinema.name %> , <%= @booking.slot.screen.cinema.location.city %></p>
 
-    <p>Slot time: <%= @bookings.slot.slot_time %></p>
+    <p>Slot ID: <%= @booking.slot_id %></p>
 
-    <p>Movie ID : <%= @bookings.slot.movie_id %></p>
+    <p>Slot time: <%= @booking.slot.slot_time %></p>
 
-    <p>Booking Date: <%= @bookings.booking_date %></p>
+    <p>Movie ID : <%= @booking.slot.movie_id %></p>
 
-    <p>Ticket Price: <%= @bookings.total_cost %></p>
+    <p>Movie Name : <%= @booking.slot.movie.name %></p>
+
+    <p>Booking Date: <%= @booking.booking_date %></p>
+
+    <p>Ticket Price: <%= @booking.total_cost %></p>
 
   </body>
 </html>
