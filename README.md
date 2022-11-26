@@ -33,8 +33,6 @@ slot:
 	 slot_time,
 	 num_seat_booked   
 	 
-Deployed this application on Heroku.
-
 
 bookings:
 	 user_id,
@@ -69,4 +67,4 @@ booking -> belongs_to :slot
 
 
 
-
+**Deployed this application on Heroku.**
