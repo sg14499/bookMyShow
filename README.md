@@ -32,6 +32,8 @@ slot:
 	 screen_id,
 	 slot_time,
 	 num_seat_booked   
+	 
+Deployed this application on Heroku.
 
 
 bookings:
