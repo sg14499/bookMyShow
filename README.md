@@ -68,5 +68,5 @@ booking -> belongs_to :slot
 
 
 **Deployed this application on Heroku.**
-**Website Link**
+**Website Link:**
 https://bookmyshow-clone-shivam.herokuapp.com/
